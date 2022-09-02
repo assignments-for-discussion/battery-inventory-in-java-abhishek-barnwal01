@@ -9,12 +9,13 @@ public class Main {
 
   static CountsByUsage countBatteriesByUsage(int[] cycles) {
     CountsByUsage counts = new CountsByUsage();
+    //cycle array iteration through for loop
     for (int i = 0; i < cycles.length; i++) {
-      if (cycles[i] < 400) 
+      if (cycles[i] < 400) // less than 400 condition
         counts.lowCount++;
-      else if (cycles[i]>=400 && cycles[i]<=919)
+      else if (cycles[i]>=400 && cycles[i]<=919) // greater than or equal to 400 & less than equal to 919 condition
         counts.mediumCount++;
-      else 
+      else // if current cycle value is greater than 919
         counts.highCount++;
     }
     return counts;
